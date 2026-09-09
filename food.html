@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Ordering Page</title>
+</head>
+
+<body>
+
+    <h1>🍕 Food Ordering Page</h1>
+
+    <form onsubmit="placeOrder(event)">
+
+        <h2>Customer Details</h2>
+
+        <label>Name:</label>
+        <input type="text" id="name" required>
+        <br><br>
+
+        <label>Phone:</label>
+        <input type="tel" required>
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email">
+        <br><br>
+
+        <h2>Select Your Food</h2>
+
+        <label>Food Item:</label>
+        <select required>
+            <option value="">-- Select Food --</option>
+            <option>Pizza</option>
+            <option>Burger</option>
+            <option>Biryani</option>
+            <option>Fried Rice</option>
+            <option>Noodles</option>
+            <option>Sandwich</option>
+            <option>French Fries</option>
+            <option>Ice Cream</option>
+        </select>
+
+        <br><br>
+
+        <label>Quantity:</label>
+        <input type="number" min="1" max="10" value="1" required>
+
+        <br><br>
+
+        <h3>Extra Items</h3>
+
+        <input type="checkbox">
+        <label>Extra Cheese</label>
+        <br>
+
+        <input type="checkbox">
+        <label>Extra Fries</label>
+        <br>
+
+        <input type="checkbox">
+        <label>Soft Drink</label>
+
+        <br><br>
+
+        <h2>Delivery Details</h2>
+
+        <label>Address:</label>
+        <br>
+        <textarea rows="4" cols="40" required></textarea>
+
+        <br><br>
+
+        <label>City:</label>
+        <input type="text" required>
+
+        <br><br>
+
+        <label>PIN Code:</label>
+        <input type="text" required>
+
+        <br><br>
+
+        <h3>Delivery Option</h3>
+
+        <input type="radio" name="delivery" required>
+        <label>Home Delivery</label>
+
+        <br>
+
+        <input type="radio" name="delivery">
+        <label>Take Away</label>
+
+        <br><br>
+
+        <h2>Payment Method</h2>
+
+        <input type="radio" name="payment" required>
+        <label>Cash on Delivery</label>
+
+        <br>
+
+        <input type="radio" name="payment">
+        <label>UPI</label>
+
+        <br>
+
+        <input type="radio" name="payment">
+        <label>Credit/Debit Card</label>
+
+        <br><br>
+
+        <h3>Special Instructions</h3>
+
+        <textarea rows="3" cols="40"
+        placeholder="Any special instructions?"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Place Order">
+        <input type="reset" value="Clear">
+
+    </form>
+
+    <script>
+        function placeOrder(event) {
+            event.preventDefault();
+
+            alert("✅ Your order is placed!\n\n🍕 Your food is getting ready...");
+        }
+    </script>
+
+</body>
+</html>
